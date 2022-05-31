@@ -7,19 +7,17 @@ import torchvision.transforms as T
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 class DQN(nn.Module):
-    def __init__(self, outputs):
+    def __init__(self, n_states, outputs, hid_dim):
         super(DQN, self).__init__()
-        self.emb = nn.Embedding(500,4)
-        self.l1 = nn.Linear(4,50)
-        self.l2 = nn.Linear(50,50)
-        self.l3 = nn.Linear(50, outputs)
+        self.l1 = nn.Linear(n_states,hid_dim)
+        self.l2 = nn.Linear(hid_dim,hid_dim)
+        self.l3 = nn.Linear(hid_dim, outputs)
 
 
     def forward(self, x):
 
         x = x.to(device)
-        x = F.relu(self.l1(self.emb(x)))
-        #x = F.relu(self.l2(self.l1(x))) Old erroneous?
+        x = F.relu(self.l1(x))
         x = F.relu(self.l2(x))
         x = self.l3(x)
         return x

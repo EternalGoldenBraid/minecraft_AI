@@ -21,9 +21,9 @@
       <!-- <DefaultWorldGenerator seed="42" /> -->
       <ClassroomDecorator seed="4711">
         <specification>
-          <width>30</width>
-          <height>30</height>
-          <length>30</length>
+          <width>7</width>
+          <height>7</height>
+          <length>7</length>
           <pathLength>0</pathLength>
           <divisions>
             <southNorth>0</southNorth>
@@ -60,20 +60,22 @@
         <Width>320</Width>
         <Height>240</Height>
       </VideoProducer>
-      <ObservationFromFullStats />
+      <ObservationFromFullStats/>
+      <!--
       <ObservationFromGrid>
           <Grid name="floor3x3">
             <min x="-1" y="-1" z="-1"/>
             <max x="1" y="-1" z="1"/>
           </Grid>
       </ObservationFromGrid>
+      <ObservationFromRecentCommands/>
+      -->
 
       <ContinuousMovementCommands turnSpeedDegs="180">
         <ModifierList type="allow-list">
           <command>move</command>
           <command>turn</command>
           <command>pitch</command>
-          <command>yaw</command>
           <command>use</command>
         </ModifierList>
       </ContinuousMovementCommands>
