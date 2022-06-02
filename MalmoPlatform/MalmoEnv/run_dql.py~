@@ -58,6 +58,7 @@ if __name__ == '__main__':
              role=args.role,
              exp_uid=args.experimentUniqueId,
              episode=args.episode, resync=args.resync)
+    import pdb; pdb.set_trace()
 
     if os.path.exists("config.yaml"):
         # If config.yml is provided, always use that.
@@ -83,7 +84,7 @@ if __name__ == '__main__':
     
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-    model = DQN(n_states=len(config['simulation']))
+    model = DQN
     #load_model=True
     load_model=False
     if load_model:

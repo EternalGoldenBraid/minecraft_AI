@@ -73,10 +73,17 @@
 
       <ContinuousMovementCommands turnSpeedDegs="180">
         <ModifierList type="allow-list">
+	  <!-- Continous -->
           <command>move</command>
-          <command>turn</command>
-          <command>pitch</command>
-          <command>use</command>
+          <!-- <command>strafe</command> -->
+          <!-- <command>pitch</command> -->
+          <!-- <command>turn</command> -->
+	  
+	  <!-- Discrete -->
+          <!-- <command>jump</command> -->
+          <!-- <command>crouch</command> -->
+          <!-- <command>attack</command> -->
+          <!-- <command>use</command> -->
         </ModifierList>
       </ContinuousMovementCommands>
       <MissionQuitCommands/>

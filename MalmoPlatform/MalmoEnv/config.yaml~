@@ -13,6 +13,7 @@ optimizer:
 
 model:
   hid_dim: 50
+  outputs: 3
 
 rl:
     gamma: 0.99

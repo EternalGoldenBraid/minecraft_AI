@@ -169,6 +169,7 @@ class Agent:
             avg_r = 0
             for step in count():
                 action = self._choose_action(state, epsilon)
+                import pdb; pdb.set_trace()
                 #next_state, reward, done, _ = self.env.step(action)
                 _, reward, done, info = self.env.step(action)
 

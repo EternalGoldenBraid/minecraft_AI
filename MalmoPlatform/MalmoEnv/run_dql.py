@@ -58,6 +58,8 @@ if __name__ == '__main__':
              role=args.role,
              exp_uid=args.experimentUniqueId,
              episode=args.episode, resync=args.resync)
+    print(env.action_space)
+    import pdb; pdb.set_trace()
 
     if os.path.exists("config.yaml"):
         # If config.yml is provided, always use that.
